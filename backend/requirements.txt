@@ -2,7 +2,7 @@
 # Python 3.11+ required
 
 # Core Flask Framework
-Flask==3.0.0
+Flask==3.1.2
 Flask-SQLAlchemy==3.1.1
 Flask-Migrate==4.0.5
 Flask-CORS==4.0.0
@@ -97,14 +97,18 @@ psutil==5.9.6
 # Timezone handling
 babel==2.13.1
 
-
+# AI Integrations
 google-generativeai==0.3.1
 openai
+huggingface_hub
+
+# Payment Integrations
 stripe
 mercadopago
 paypalrestsdk
 
-
+# Other
 Requests==2.31.0
 ReportLab==4.0.7
 Pillow==10.1.0
+
