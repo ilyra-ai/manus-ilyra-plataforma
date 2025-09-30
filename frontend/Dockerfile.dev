@@ -1,0 +1,33 @@
+# Frontend Development Dockerfile
+FROM node:22.13.0-alpine
+
+# Instalar dependências do sistema
+RUN apk add --no-cache \
+    git \
+    python3 \
+    make \
+    g++ \
+    && rm -rf /var/cache/apk/*
+
+# Definir diretório de trabalho
+WORKDIR /app
+
+# Copiar arquivos de dependências
+COPY package*.json ./
+
+# Instalar dependências
+RUN npm ci --only=production=false
+
+# Copiar código fonte
+COPY . .
+
+# Expor porta
+EXPOSE 3000
+
+# Configurar variáveis de ambiente para desenvolvimento
+ENV NODE_ENV=development
+ENV CHOKIDAR_USEPOLLING=true
+ENV WATCHPACK_POLLING=true
+
+# Comando para desenvolvimento com hot reload
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "3000"]
