@@ -1,0 +1,11 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/home/ubuntu/ilyra_project/ilyra-platform/backend/app.py", line 298, in <module>
+    app = create_app()
+          ^^^^^^^^^^^^
+  File "/home/ubuntu/ilyra_project/ilyra-platform/backend/app.py", line 49, in create_app
+    from routes.plan_routes import plan_bp
+  File "/home/ubuntu/ilyra_project/ilyra-platform/backend/routes/plan_routes.py", line 968, in <module>
+    @require_permission(Permission.VIEW_SUBSCRIPTION_ANALYTICS)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Permission' has no attribute 'VIEW_SUBSCRIPTION_ANALYTICS'

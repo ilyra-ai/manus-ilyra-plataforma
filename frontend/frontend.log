@@ -1,0 +1,11 @@
+nohup: ignoring input
+
+> ilyra-frontend@0.0.0 dev
+> vite --host
+
+
+  VITE v5.4.20  ready in 173 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://169.254.0.21:5173/
+(!) Could not auto-determine entry point from rollupOptions or html files and there are no explicit optimizeDeps.include patterns. Skipping dependency pre-bundling.

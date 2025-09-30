@@ -1,0 +1,66 @@
+
+> ilyra-frontend@0.0.0 preview
+> vite preview --host 0.0.0.0
+
+  ➜  Local:   http://localhost:4173/
+  ➜  Network: http://169.254.0.21:4173/
+  ➜  press h + enter to show help
+
+  #  Node.js[32753]: void node::ResetStdio() at ../src/node.cc:760
+  #  Assertion failed: !(err != 0) || (err == -1 && (*__errno_location ()) == 1)
+
+----- Native stack trace -----
+
+ 1: 0xf95cf7 node::Assert(node::AssertionInfo const&) [node]
+ 2: 0xf42264  [node]
+ 3: 0x7fcd8a645495  [/lib/x86_64-linux-gnu/libc.so.6]
+ 4: 0x7fcd8a645610 on_exit [/lib/x86_64-linux-gnu/libc.so.6]
+ 5: 0xe98a4f node::DefaultProcessExitHandlerInternal(node::Environment*, node::ExitCode) [node]
+ 6: 0xf01e4f node::Environment::Exit(node::ExitCode) [node]
+ 7: 0x1d755e2  [node]
+
+  #  Node.js[32753]: void node::ResetStdio() at ../src/node.cc:760
+  #  Assertion failed: !(err != 0) || (err == -1 && (*__errno_location ()) == 1)
+
+----- Native stack trace -----
+
+ 1: 0xf95cf7 node::Assert(node::AssertionInfo const&) [node]
+ 2: 0xf42264  [node]
+ 3: 0xf42982 node::TrapWebAssemblyOrContinue(int, siginfo_t*, void*) [node]
+ 4: 0x7fcd8a642520  [/lib/x86_64-linux-gnu/libc.so.6]
+Aborted
+
+  #  Node.js[32741]: void node::ResetStdio() at ../src/node.cc:760
+  #  Assertion failed: !(err != 0) || (err == -1 && (*__errno_location ()) == 1)
+
+----- Native stack trace -----
+
+ 1: 0xf95cf7 node::Assert(node::AssertionInfo const&) [npm run preview --host 0.0.0.0]
+ 2: 0xf42264  [npm run preview --host 0.0.0.0]
+ 3: 0x7fda6c645495  [/lib/x86_64-linux-gnu/libc.so.6]
+ 4: 0x7fda6c645610 on_exit [/lib/x86_64-linux-gnu/libc.so.6]
+ 5: 0xe98a4f node::DefaultProcessExitHandlerInternal(node::Environment*, node::ExitCode) [npm run preview --host 0.0.0.0]
+ 6: 0xf01e4f node::Environment::Exit(node::ExitCode) [npm run preview --host 0.0.0.0]
+ 7: 0x1d755e2  [npm run preview --host 0.0.0.0]
+
+  #  Node.js[32741]: void node::ResetStdio() at ../src/node.cc:760
+  #  Assertion failed: !(err != 0) || (err == -1 && (*__errno_location ()) == 1)
+
+----- Native stack trace -----
+
+ 1: 0xf95cf7 node::Assert(node::AssertionInfo const&) [npm run preview --host 0.0.0.0]
+ 2: 0xf42264  [npm run preview --host 0.0.0.0]
+ 3: 0xf42982 node::TrapWebAssemblyOrContinue(int, siginfo_t*, void*) [npm run preview --host 0.0.0.0]
+ 4: 0x7fda6c642520  [/lib/x86_64-linux-gnu/libc.so.6]
+ 5: 0x1929147 v8::internal::tracing::TraceEventHelper::GetTracingController() [npm run preview --host 0.0.0.0]
+ 6: 0x13dc745 v8::internal::Isolate::CaptureDetailedStackTrace(int, v8::StackTrace::StackTraceOptions) [npm run preview --host 0.0.0.0]
+ 7: 0x126a133 v8::StackTrace::CurrentStackTrace(v8::Isolate*, int, v8::StackTrace::StackTraceOptions) [npm run preview --host 0.0.0.0]
+ 8: 0xf95c46 node::GetCurrentStackTrace(v8::Isolate*, int) [npm run preview --host 0.0.0.0]
+ 9: 0xee0c8b node::DumpJavaScriptBacktrace(_IO_FILE*) [npm run preview --host 0.0.0.0]
+10: 0xf95d03 node::Assert(node::AssertionInfo const&) [npm run preview --host 0.0.0.0]
+11: 0xf42264  [npm run preview --host 0.0.0.0]
+12: 0x7fda6c645495  [/lib/x86_64-linux-gnu/libc.so.6]
+13: 0x7fda6c645610 on_exit [/lib/x86_64-linux-gnu/libc.so.6]
+14: 0xe98a4f node::DefaultProcessExitHandlerInternal(node::Environment*, node::ExitCode) [npm run preview --host 0.0.0.0]
+15: 0xf01e4f node::Environment::Exit(node::ExitCode) [npm run preview --host 0.0.0.0]
+16: 0x1d755e2  [npm run preview --host 0.0.0.0]
